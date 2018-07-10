@@ -20,7 +20,7 @@ Crear base de datos
 create database color ;
 
 create table colores (
-	id int primary key,
+	id int primary key auto_increment,
 	color varchar (250),
 	descripcion varchar(250) 
 );

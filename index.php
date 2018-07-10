@@ -57,49 +57,45 @@ if ($_GET) {
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
  </head>
- <body>
- 	<h2 class="text-danger display-4 text-center text-uppercase">color</h2>
-
- 	<div class="container mt-5">
- 		<div class="row">
- 			<div class="col-md-6">
- 				<!-- recorrer tabla con foreach  poner al final : -->
- 				<?php foreach ($resultado as $values): ?>
- 					<div class="alert alert-<?php echo $values['color'] ?> text-uppercase" role="alert">
- 						<?php echo $values['color'] ?>
- 						-
- 						<?php echo $values['descripcion'] ?>
- 						<a href="index.php?id=<?php echo $values['id'] ?>" class="text-danger float-right"><i class="fas fa-edit"></i></a>
- 						<a href="eliminar.php?id=<?php echo $values['id'] ?>" class="float-right pr-2"><i class="fas fa-trash-alt"></i></a>
- 						
- 					</div>
- 					<!-- cerrr el foreach -->
- 					<?php endforeach ?>
- 			</div>
-
- 			<div class="col-md-6">
- 				<?php if(!$_GET): ?>
- 				<form method="post" >
- 					<h3 class="text-center">Agragar elementos</h3>
- 					<input placeholder="color" type="text" class="form-control form-group" name="color">
- 					<input placeholder="descripción" type="text" class="form-control form-group" name="descripcion">
- 					<button class="btn btn-outline-success mt-3">Agregar</button>
- 				</form>
- 				<?php endif ?>
- 				<?php if($_GET): ?>
- 				<form method="get" action="editar.php" >
- 					<h3 class="text-center">Editar elementos</h3>
- 					<input value="<?php echo $resultado_unico['color'] ?>" placeholder="color" type="text" class="form-control form-group" name="color">
- 					<input value="<?php echo $resultado_unico['descripcion'] ?>" placeholder="descripción" type="text" class="form-control form-group" name="descripcion">
- 					<input value="<?php echo $resultado_unico['id'] ?>" placeholder="id" type="text" class="d-none" name="id">
-
- 					<button class="btn btn-outline-success mt-3">Agregar</button>
- 				</form>
- 				<?php endif ?> 				
- 			</div>
- 		</div>
- 	</div>
- </body>
+<body>
+   <h2 class="text-danger display-4 text-center text-uppercase">color</h2>
+   <section class="container mt-5">
+      <div class="row">
+         <div class="col-md-6">
+            <!-- recorrer tabla con foreach  poner al final : -->
+            <?php foreach ($resultado as $values): ?>
+            <div class="alert alert-<?php echo $values['color'] ?> text-uppercase" role="alert">
+               <?php echo $values['color'] ?>
+               -
+               <?php echo $values['descripcion'] ?>
+               <a href="index.php?id=<?php echo $values['id'] ?>" class="text-danger float-right"><i class="fas fa-edit"></i></a>
+               <a href="eliminar.php?id=<?php echo $values['id'] ?>" class="float-right pr-2"><i class="fas fa-trash-alt"></i></a>
+            </div>
+            <!-- cerrr el foreach -->
+            <?php endforeach ?>
+         </div>
+         <div class="col-md-6">
+            <?php if(!$_GET): ?>
+            <form method="post" >
+               <h3 class="text-center">Agragar elementos</h3>
+               <input placeholder="color" type="text" class="form-control form-group" name="color">
+               <input placeholder="descripción" type="text" class="form-control form-group" name="descripcion">
+               <button class="btn btn-outline-success mt-3">Agregar</button>
+            </form>
+            <?php endif ?>
+            <?php if($_GET): ?>
+            <form method="get" action="editar.php" >
+               <h3 class="text-center">Editar elementos</h3>
+               <input value="<?php echo $resultado_unico['color'] ?>" placeholder="color" type="text" class="form-control form-group" name="color">
+               <input value="<?php echo $resultado_unico['descripcion'] ?>" placeholder="descripción" type="text" class="form-control form-group" name="descripcion">
+               <input value="<?php echo $resultado_unico['id'] ?>" placeholder="id" type="text" class="d-none" name="id">
+               <button class="btn btn-outline-success mt-3">Agregar</button>
+            </form>
+            <?php endif ?> 				
+         </div>
+      </div>
+   </section>
+</body>
  </html>
 
 <?php // Cerrrar conexión  
