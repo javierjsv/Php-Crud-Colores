@@ -7,7 +7,7 @@ $pass = 1234;
 
 try{
 	$pdo = new PDO($link,$user,$pass);
-	// echo 'conect';
+	//echo 'conect <br>';
 
 } catch (PDOException $e) {
     print "¡Error!: " . $e->getMessage() . "<br/>";

@@ -12,6 +12,13 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
  </head>
 		<body>
+<nav class="navbar navbar-dark bg-primary">
+  <div class="d-flex">
+  	<a href="index.php" class="nav-link text-white nav-item btn btn-primary">inicio</a>
+  	<a href="registro.php" class="nav-link text-white nav-item btn btn-primary">Registar</a>
+
+  </div>
+</nav>
 			<div class="container">	
 				<h2 class="display-4 text-center text-success">
 					<i class="fas fa-users text-danger"></i>Registro de <b>usuarios</b></h2>
@@ -21,7 +28,7 @@
 				<input type="text"  name="nombre_usario" class="form-control form-group" placeholder="usario" >
 				<input type="password" name="contrasena" class="form-control form-group" placeholder="Constraseña" >
 				<input type="password" name="contrasena2" class="form-control form-group" placeholder="Repita Constraseña" >				
-				<button class="btn btn-outline-warning">enviar</button>
+				<button class="btn btn-outline-warning" type="submit">enviar</button>
 				</div>
 
 			</form>

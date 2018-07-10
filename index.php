@@ -58,6 +58,14 @@ if ($_GET) {
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
  </head>
 <body>
+<nav class="navbar navbar-dark bg-primary">
+  <div class="d-flex">
+  	<a href="index.php" class="nav-link text-white nav-item btn btn-primary">inicio</a>
+  	<a href="registro.php" class="nav-link text-white nav-item btn btn-primary">Registar</a>
+
+  </div>
+</nav>
+
    <h2 class="text-danger display-4 text-center text-uppercase">color</h2>
    <section class="container mt-5">
       <div class="row">
