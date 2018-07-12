@@ -16,7 +16,6 @@
   <div class="d-flex">
   	<a href="index.php" class="nav-link text-white nav-item btn btn-primary">inicio</a>
   	<a href="registro.php" class="nav-link text-white nav-item btn btn-primary">Registar</a>
-
   </div>
 </nav>
 			<div class="container">	
